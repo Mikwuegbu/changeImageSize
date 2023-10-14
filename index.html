@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #image-container {
+      width: 100%;
+      text-align: center;
+    }
+    #image {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="image-container">
+    <img id="image" src="your-image.jpg" alt="Image">
+  </div>
+  <button id="minimize-button" onclick="minimizeImage()">Minimize</button>
+  <button id="maximize-button" onclick="maximizeImage()">Maximize</button>
+
+  <script>
+    let isMinimized = false;
+
+    function minimizeImage() {
+      if (!isMinimized) {
+        document.getElementById("image").style.width = "50px";
+        isMinimized = true;
+      }
+    }
+
+    function maximizeImage() {
+      if (isMinimized) {
+        document.getElementById("image").style.width = "100%";
+        isMinimized = false;
+      }
+    }
+  </script>
+</body>
+</html>
