@@ -1,7 +1,7 @@
-function minimizeImage() {
+let myImg = document.getElementById("image");
+let myCurrWidth = myImg.clientWidth;
 
-    let myImg = document.getElementById("image");
-    let myCurrWidth = myImg.clientWidth;
+function minimizeImage() { 
     if (myCurrWidth === 0) {
         alert("Minimum size reached");
     } else {
@@ -10,9 +10,6 @@ function minimizeImage() {
 }
 
 function maximizeImage() {
-
-    let myImg = document.getElementById("image");
-    let myCurrWidth = myImg.clientWidth;
     if (myCurrWidth === 1000) {
         alert("Maximum size reached");
     } else {
